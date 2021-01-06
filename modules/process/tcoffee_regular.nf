@@ -37,6 +37,7 @@ process TCOFFEE_REGULAR {
 }
 
 process FOO {
+    container 'biocontainers/biocontainers:vdebian-stretch-backports_cv2'
     output:
     path 'foo.txt'
     
@@ -47,6 +48,7 @@ process FOO {
 }
 
  process BAR {
+    container 'biocontainers/biocontainers:vdebian-stretch-backports_cv2'
     input:
     path x
     
