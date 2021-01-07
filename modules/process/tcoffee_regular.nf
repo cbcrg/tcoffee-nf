@@ -13,6 +13,7 @@ process TCOFFEE_REGULAR {
     container 'cbcrg/tcoffee@sha256:8894ba57a7ff34965d8febd51dcb7765b71314ca06893bc473d32e22032bf66f'
     tag "Regular tcoffee ${data_in.name}"
     publishDir "${params.outdir}/alignments", pattern: '*.fasta_aln'
+    label 'aws'
     
     input:
     path data_in
