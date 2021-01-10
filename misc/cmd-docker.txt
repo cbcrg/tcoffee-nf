@@ -1,0 +1,15 @@
+* Run tcoffee image
+
+docker run --rm -it -v "$(pwd)/data":/test_data -w /test_data 65e13ddec206 bash
+
+t_coffee -in $data_in -mode regular -output=score_html clustalw_aln fasta_aln score_ascii phylip -run_name=result
+
+
+
+t_coffee -in=$data_in -mode=regular -method=sap_pair TMalign_pair mustang_pair -output=score_html clustalw_aln fasta_aln score_ascii phylip -maxnseq=150 -maxlen=10000 -case=upper -seqnos=off -outorder=input -run_name=result -multi_core=4 -quiet=stdout
+    
+
+
+t_coffee -in=../sh3.fasta -mode=regular -method=sap_pair TMalign_pair mustang_pair -output=score_html clustalw_aln fasta_aln score_ascii phylip -maxnseq=150 -maxlen=10000 -case=upper -seqnos=off -outorder=input -run_name=result -multi_core=4 -quiet=stdout
+
+t_coffee -in=../sh3.fasta -mode=regular -method=sap_pair TMalign_pair mustang_pair -output=score_html clustalw_aln fasta_aln score_ascii phylip -maxnseq=150 -maxlen=10000 -case=upper -seqnos=off -outorder=input -run_name=result -multi_core=4 -quiet=stdout -outfile result.aln

@@ -1,0 +1,13 @@
+t_coffee -in=sh3.fasta -mode=regular -output=score_html clustalw_aln fasta_aln score_ascii phylip -maxnseq=150 -maxlen=10000 -case=upper -seqnos=off -outorder=input -run_name=result -multi_core=4 -quiet=stdout             
+
+t_coffee -in sh3.fasta \
+             -mode regular \
+             -output=score_html clustalw_aln fasta_aln score_ascii phylip \
+             -maxnseq=150 \
+             -maxlen=10000 \
+             -case=upper \
+             -seqnos=off \
+             -outorder=input \
+             -run_name=result \
+             -multi_core=4 \
+             -quiet=stdout > sh3.fasta.tc_LOG  
