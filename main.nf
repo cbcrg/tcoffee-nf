@@ -31,7 +31,9 @@ params.outdir = 'results'
 // Don't overwrite global params.modules, create a copy instead and use that within the main script.
 def modules = params.modules.clone()
 
-
+log.info """
+modules.shared.aln_format   ----====== ${params.modules.shared.aln_format}
+"""
 // params.modules.tcoffee_regular = [:]
 // params.modules.tcoffee_regular.case
 // =${params.case}
